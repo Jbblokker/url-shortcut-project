@@ -1,8 +1,9 @@
 <div class="history-display">
     <h2>Your Previous Links</h2>
     <ul>
-        <li>
-            Here is where the history will go
+        <li *ngFor="let
+         data of urlList | async ">
+            {{data.newUrl}}
         </li>
     </ul>
 </div>

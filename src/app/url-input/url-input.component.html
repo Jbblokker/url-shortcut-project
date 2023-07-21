@@ -1,5 +1,5 @@
 <div class="input-card-box">
     <h2>Add your Url here</h2>
-    <input class="url-input" type="text" [formControl]="originalUrl">
-    <button class="url-submit-btn">Submit</button>
+    <input class="url-input" type="text" [(ngModel)]="urlInput" #url>
+    <button class="url-submit-btn"(click)="sendUrlData(url.value)">Submit</button>
 </div>

@@ -3,8 +3,13 @@
     src: url('../../assets/DarkerGrotesque-Regular.ttf');
 }
 
+::-webkit-scrollbar {
+    width: 0px;
+    background: transparent; /* make scrollbar transparent */
+}
+
 .history-display{
-    width: 45%;
+    width: 500px;
     border: 2px solid;
     height: 200px;
     border-radius: 16px;
@@ -18,9 +23,14 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    overflow: auto;
     
     h2{
         font-weight: 300;
+    }
+
+    li{
+        font-size: 20px;
     }
     
 }

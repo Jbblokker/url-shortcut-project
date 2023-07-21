@@ -3,6 +3,60 @@
     src: url('../assets/DarkerGrotesque-Regular.ttf');
 }
 
-h1{
-    font-family: dark;
+.paragraph-intro{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 75px;
+
+    h1{
+        width: 300px;
+        font-family: dark;
+        font-weight: 33;
+        font-size: 50px;
+        color: white;
+        background-color: #ff8f00;
+        margin-bottom: 15px;
+        border-radius: 10px;
+        text-align: center;
+    }
+    
+    p{
+        color:#ff8f00;
+        margin: 5px;
+        font-size: 20px;
+    }
+}
+
+
+.component-box{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+}
+
+footer{
+    position:fixed;
+    bottom:0px;
+    width:100%
+}
+
+p{
+    color:#ff8f00;
+}
+
+.footer-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.angular{
+    height: 60px;
+}
+
+.firebase{
+    width: 50px;
+
 }

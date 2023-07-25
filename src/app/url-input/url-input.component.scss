@@ -23,7 +23,6 @@
         font-weight: 300;
     }
     
-
     .url-input{
         height: 30px;
         width: 75%;
@@ -35,7 +34,6 @@
         color: black;
         font-family: 'dark';
         font-size: 25px;
-
     }
 
     .url-submit-btn {
@@ -53,6 +51,10 @@
         flex-direction: column;
         justify-content: flex-end;
         align-items: center;
-
     }
+
+    .url-submit-btn:hover {
+        background-color: #00897b; 
+        color: white;
+      }
 }

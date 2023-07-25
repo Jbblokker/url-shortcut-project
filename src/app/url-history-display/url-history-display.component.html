@@ -1,9 +1,9 @@
 <div class="history-display">
     <h2>Your Previous Links</h2>
     <ul>
-        <li *ngFor="let
-         data of urlList | async ">
-            {{data.newUrl}}
+        <li *ngFor="let data of urlList | async " #url>
+            {{data.shortUrl}}
+           <img src="../../assets/clipboard.svg" (click)="copyToClipboard(url)">
         </li>
     </ul>
 </div>

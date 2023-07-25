@@ -6,18 +6,14 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class FirebaseFunctionsService {
-  userUrl?: Observable<any>;
-
+  userUrl?: Observable<object>;
+ 
   constructor(private firestore: Firestore) { }
 
-  public async addData(urlData: any): Promise<void>{
+  public async addData(urlData: string): Promise<void>{
     const collectionInstance = collection(this.firestore, 'your-shortcuts');
     addDoc(collectionInstance, { 
-      newUrl: 'waiting',
-      oldUrl: urlData.value || null
-    })
-    .then(() => {
-      console.log('saved successfully')
+      url: urlData
     })
     .catch((err) => {
       console.log(err)
@@ -32,7 +28,8 @@ export class FirebaseFunctionsService {
     this.userUrl = collectionData(urlCollection);
   }
 
-  public getUrlHistory(){
+  //this method allows components to get the result value of the getData method above
+  public getUrlHistory():object {
      return this.userUrl
   }
 }
